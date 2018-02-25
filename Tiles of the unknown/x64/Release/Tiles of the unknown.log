@@ -1,0 +1,57 @@
+﻿  Base.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Game.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Global.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Map.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+Map.cpp(13): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Sprite.cpp
+E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(31): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(57): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(61): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+Sprite.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Sprite.cpp(15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Sprite.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Sprite.cpp(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Base.obj : error LNK2001: unresolved external symbol SDL_DestroyRenderer
+Base.obj : error LNK2001: unresolved external symbol SDL_DestroyWindow
+Base.obj : error LNK2001: unresolved external symbol "public: __cdecl m1::C_Random::C_Random(void)" (??0C_Random@m1@@QEAA@XZ)
+Base.obj : error LNK2001: unresolved external symbol SDL_CreateRenderer
+Base.obj : error LNK2001: unresolved external symbol SDL_GetCurrentDisplayMode
+Base.obj : error LNK2001: unresolved external symbol SDL_CreateWindow
+Base.obj : error LNK2001: unresolved external symbol SDL_SetRenderDrawColor
+Game.obj : error LNK2001: unresolved external symbol "public: void __cdecl m1::C_Timer::RestartTimer(void)" (?RestartTimer@C_Timer@m1@@QEAAXXZ)
+Game.obj : error LNK2001: unresolved external symbol "public: __cdecl m1::C_Timer::C_Timer(void)" (??0C_Timer@m1@@QEAA@XZ)
+main.obj : error LNK2001: unresolved external symbol SDL_GetKeyboardState
+main.obj : error LNK2001: unresolved external symbol SDL_RenderClear
+main.obj : error LNK2001: unresolved external symbol SDL_Init
+main.obj : error LNK2001: unresolved external symbol SDL_Quit
+main.obj : error LNK2001: unresolved external symbol TTF_Init
+main.obj : error LNK2001: unresolved external symbol IMG_Init
+main.obj : error LNK2001: unresolved external symbol SDL_PollEvent
+main.obj : error LNK2001: unresolved external symbol SDL_GetTicks
+main.obj : error LNK2001: unresolved external symbol SDL_RenderPresent
+main.obj : error LNK2001: unresolved external symbol TTF_Quit
+main.obj : error LNK2001: unresolved external symbol IMG_Quit
+Sprite.obj : error LNK2001: unresolved external symbol SDL_DestroyTexture
+Sprite.obj : error LNK2001: unresolved external symbol SDL_RenderCopy
+Sprite.obj : error LNK2001: unresolved external symbol SDL_SetColorKey
+Sprite.obj : error LNK2001: unresolved external symbol SDL_MapRGB
+Sprite.obj : error LNK2001: unresolved external symbol SDL_FreeSurface
+Sprite.obj : error LNK2001: unresolved external symbol IMG_Load
+Sprite.obj : error LNK2001: unresolved external symbol SDL_CreateTextureFromSurface
+E:\Programming\C++\Projects\Tiles of the unknown\x64\Release\Tiles of the unknown.exe : fatal error LNK1120: 27 unresolved externals

@@ -1,4 +1,11 @@
 #pragma once
+
+//TARGET WIN7
+#define WINVER 0x0601
+#define _WIN32_WINNT 0x0601
+
+#include <sdkddkver.h>
+
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
@@ -21,6 +28,8 @@ extern int SCREEN_RESOLUTION_H;
 extern const char* MAPSHEETPATH;
 
 extern float FLOOR_SCALE;
+
+extern const float MOVESPEED;
 
 namespace m1
 {
@@ -52,5 +61,23 @@ namespace m1
 			return a.y + a.h / 2;
 		}
 	};
+
+	//CHECK IF THE KEY WITH THE SCANCODE scancode IS PRESSED
+	inline bool KeyIsPressed(SDL_Scancode scancode)
+	{
+		static const Uint8* keyStatus = SDL_GetKeyboardState(NULL);
+		keyStatus = SDL_GetKeyboardState(NULL);
+
+		if (keyStatus[scancode] == 1)
+		{
+			return true;
+		}
+
+		else
+		{
+			return false;
+		}
+
+	}
 
 }

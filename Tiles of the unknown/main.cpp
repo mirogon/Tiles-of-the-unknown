@@ -72,6 +72,12 @@ int main(int argc, char* argv[])
 		std::cout << "Error: " << e.what() << std::endl;
 	}
 
+	catch (std::string& e)
+	{
+		std::cout << "Error: " << e << std::endl;
+	}
+
+
 	C_Sprite::DeallocateStaticTextures();
 	TTF_Quit();
 	IMG_Quit();

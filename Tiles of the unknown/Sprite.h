@@ -13,13 +13,19 @@ public:
 	void InitSprite(m1::E_SpriteType spriteType, int x = 0, int y = 0);
 
 	virtual void Render( );
+	virtual void Move(const float& xChange, const float& yChange);
+
+	const m1::double_Rect GetRect()
+	{
+		return rect;
+	}
 
 	static void InitStaticTextures();
 	static void DeallocateStaticTextures();
 	
 private:
 	static SDL_Texture* mapSheet;
-	std::function<void()> renderFunction;
+	void(C_Sprite::*renderFunction)();
 	m1::E_SpriteType spriteType;
 	m1::double_Rect rect;
 
@@ -30,7 +36,13 @@ private:
 
 inline void C_Sprite::Render()
 {
-	renderFunction();
+	(this->*renderFunction)();
+}
+
+inline void C_Sprite::Move(const float& xChange, const float& yChange)
+{
+	rect.x += xChange;
+	rect.y += yChange;
 }
 
 inline void C_Sprite::RenderFloor()
@@ -40,6 +52,6 @@ inline void C_Sprite::RenderFloor()
 
 	srcRect = { 0,0, 16, 16 };
 	dstRect = { int(rect.x), int(rect.y), int(rect.w), int(rect.h)};
-
+	
 	SDL_RenderCopy(_GetRenderer, mapSheet, &srcRect, &dstRect);
 }

@@ -13,7 +13,7 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 	case m1::E_SpriteType::floor:
 		rect.w = 16 * FLOOR_SCALE;
 		rect.h = 16 * FLOOR_SCALE;
-		renderFunction = std::bind(&C_Sprite::RenderFloor, this);
+		renderFunction = &C_Sprite::RenderFloor;
 		break;
 
 	default:
@@ -40,7 +40,7 @@ void C_Sprite::InitSprite(m1::E_SpriteType s, int x, int y)
 	case m1::E_SpriteType::floor:
 		rect.w = 16 * FLOOR_SCALE;
 		rect.h = 16 * FLOOR_SCALE;
-		renderFunction = std::bind(&C_Sprite::RenderFloor, this);
+		renderFunction = &C_Sprite::RenderFloor;
 		break;
 
 	default:

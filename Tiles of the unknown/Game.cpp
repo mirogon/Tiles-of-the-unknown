@@ -1,8 +1,7 @@
 #include "Game.h"
 
-C_Game::C_Game():
-	testSprite{m1::floor, 100, 100}
+C_Game::C_Game()
 {
-
+	gameTimer.RestartTimer();
 }
 
