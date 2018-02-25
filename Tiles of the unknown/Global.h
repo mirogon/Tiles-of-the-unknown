@@ -1,8 +1,14 @@
 #pragma once
 
-//TARGET WIN7
-#define WINVER 0x0601
-#define _WIN32_WINNT 0x0601
+
+#define WIN7BUILD
+
+#ifdef WIN7BUILD
+
+	#define WINVER 0x0601
+	#define _WIN32_WINNT 0x0601
+
+#endif
 
 #include <sdkddkver.h>
 
@@ -24,6 +30,9 @@
 extern const char* WINDOWNAME;
 extern int SCREEN_RESOLUTION_W;
 extern int SCREEN_RESOLUTION_H;
+
+extern float RESOLUTION_SCALE_W;
+extern float RESOLUTION_SCALE_H;
 
 extern const char* MAPSHEETPATH;
 
