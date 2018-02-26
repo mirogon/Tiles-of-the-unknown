@@ -10,7 +10,7 @@ C_Map::C_Map()
 	{
 		for (int o = 0; o < testSizeY; ++o)
 		{
-			mapTiles.push_back(*new C_Sprite(m1::E_SpriteType::floor, i * 16 * FLOOR_SCALE, o * 16 * FLOOR_SCALE));
+			mapTiles.push_back(*new C_Sprite(m1::E_SpriteType::Floor, i * 16 * FLOOR_SCALE, o * 16 * FLOOR_SCALE));
 		}
 	}
 	

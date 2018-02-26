@@ -27,6 +27,7 @@
 #include <M1Random.h>
 #include <M1Timer.h>
 
+//General
 extern const char* WINDOWNAME;
 extern int SCREEN_RESOLUTION_W;
 extern int SCREEN_RESOLUTION_H;
@@ -34,11 +35,21 @@ extern int SCREEN_RESOLUTION_H;
 extern float RESOLUTION_SCALE_W;
 extern float RESOLUTION_SCALE_H;
 
+//Game
+extern float MOVESPEED_W;
+extern float MOVESPEED_H;
+
+extern int ANIMATIONSPEED_PLAYERWALK;
+extern const uint8_t ANIMATIONLENGTH_PLAYERWALKDOWN;
+
+//PATHS
 extern const char* MAPSHEETPATH;
+extern const char* PLAYERWALKDOWNSHEETPATH;
 
+//SCALES
 extern float FLOOR_SCALE;
+extern float PLAYER_SCALE;
 
-extern const float MOVESPEED;
 
 namespace m1
 {
@@ -46,7 +57,8 @@ namespace m1
 
 	enum E_GameState { GS_None = 0, GS_Game_Play = 1, GS_Game_Over = 2, GS_Game_Menu = 3, };
 
-	enum E_SpriteType { floor = 0 };
+	enum E_SpriteType { Floor = 0};
+	enum E_AnimationType { PlayerWalkDown = 0 };
 
 	struct double_Rect {
 

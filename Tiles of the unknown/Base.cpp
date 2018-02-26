@@ -20,6 +20,9 @@ C_Base::C_Base()
 		RESOLUTION_SCALE_H = 1;
 	}
 
+	MOVESPEED_H *= RESOLUTION_SCALE_H;
+	MOVESPEED_W *= RESOLUTION_SCALE_W;
+
 	std::cout << "RESOLUTION: " << SCREEN_RESOLUTION_W << "x" << SCREEN_RESOLUTION_H << std::endl;
 	std::cout << "RESOLUTION SCALE: " << RESOLUTION_SCALE_W << "x" << RESOLUTION_SCALE_H << std::endl;
 

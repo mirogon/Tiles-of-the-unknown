@@ -1,5 +1,5 @@
 #pragma once
-#include "Sprite.h"
+#include "Player.h"
 
 class C_Map
 {

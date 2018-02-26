@@ -10,7 +10,7 @@ public:
 	C_Sprite(m1::E_SpriteType, int x = 0, int y = 0);
 	virtual ~C_Sprite();
 
-	void InitSprite(m1::E_SpriteType spriteType, int x = 0, int y = 0);
+	virtual void Init(m1::E_SpriteType spriteType, int x = 0, int y = 0);
 
 	virtual void Render( );
 	virtual void Move(const float& xChange, const float& yChange);
@@ -23,7 +23,7 @@ public:
 	static void InitStaticTextures();
 	static void DeallocateStaticTextures();
 	
-private:
+protected:
 	static SDL_Texture* mapSheet;
 	void(C_Sprite::*renderFunction)();
 	m1::E_SpriteType spriteType;
@@ -55,3 +55,4 @@ inline void C_Sprite::RenderFloor()
 	
 	SDL_RenderCopy(_GetRenderer, mapSheet, &srcRect, &dstRect);
 }
+

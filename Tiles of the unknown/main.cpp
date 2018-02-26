@@ -8,12 +8,14 @@ int main(int argc, char* argv[])
 	IMG_Init(IMG_INIT_PNG);
 	TTF_Init();
 
-	try {
-
+	try 
+	
+	{
 		//Create static base instance
 		C_Base::GetInstance();
 
 		C_Sprite::InitStaticTextures();
+		C_Animation::InitStaticAnimations();
 
 		C_Game mainGame;
 		m1::E_GameState currentGameState = m1::GS_Game_Play;
@@ -78,6 +80,7 @@ int main(int argc, char* argv[])
 	}
 
 
+	C_Sprite::DeallocateStaticTextures();
 	C_Sprite::DeallocateStaticTextures();
 	TTF_Quit();
 	IMG_Quit();

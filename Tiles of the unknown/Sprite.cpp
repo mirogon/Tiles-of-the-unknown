@@ -10,7 +10,7 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 
 	switch (spriteType)
 	{
-	case m1::E_SpriteType::floor:
+	case m1::E_SpriteType::Floor:
 		rect.w = 16 * FLOOR_SCALE * RESOLUTION_SCALE_W;
 		rect.h = 16 * FLOOR_SCALE * RESOLUTION_SCALE_H;
 		renderFunction = &C_Sprite::RenderFloor;
@@ -28,7 +28,7 @@ C_Sprite::~C_Sprite()
 
 }
 
-void C_Sprite::InitSprite(m1::E_SpriteType s, int x, int y)
+void C_Sprite::Init(m1::E_SpriteType s, int x, int y)
 {
 	rect.x = x;
 	rect.y = y;
@@ -37,7 +37,7 @@ void C_Sprite::InitSprite(m1::E_SpriteType s, int x, int y)
 
 	switch (spriteType)
 	{
-	case m1::E_SpriteType::floor:
+	case m1::E_SpriteType::Floor:
 		rect.w = 16 * FLOOR_SCALE * RESOLUTION_SCALE_W;
 		rect.h = 16 * FLOOR_SCALE * RESOLUTION_SCALE_H;
 		renderFunction = &C_Sprite::RenderFloor;
