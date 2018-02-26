@@ -22,4 +22,4 @@ const char* PLAYERWALKDOWNSHEETPATH = "./data/png/playerWalkDown.png";
 
 //Scales
 float FLOOR_SCALE = 2.0f;
-float PLAYER_SCALE = 2.0f;
+float PLAYER_SCALE = 4.0f;

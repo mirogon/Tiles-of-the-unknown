@@ -2,6 +2,8 @@
 
 #undef main
 
+void ReadConfig();
+
 int main(int argc, char* argv[])
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -11,6 +13,9 @@ int main(int argc, char* argv[])
 	try 
 	
 	{
+
+		ReadConfig();
+
 		//Create static base instance
 		C_Base::GetInstance();
 
@@ -87,4 +92,20 @@ int main(int argc, char* argv[])
 	SDL_Quit();
 
 	return 0;
+}
+
+void ReadConfig()
+{
+	if (m1::ReadConfig("developement_config.m1cfg", "PLAYER_SCALE", PLAYER_SCALE) == false)
+	{
+		std::cout << "Could not find a value for PLAYER_SCALE in developement_config.m1cfg" << std::endl;
+	}
+	if (m1::ReadConfig("developement_config.m1cfg", "FLOOR_SCALE", FLOOR_SCALE) == false)
+	{
+		std::cout << "Could not find a value for FLOOR_SCALE in developement_config.m1cfg" << std::endl;
+	}
+	if (m1::ReadConfig("developement_config.m1cfg", "ANIMATIONSPEED_PLAYERWALK", ANIMATIONSPEED_PLAYERWALK) == false)
+	{
+		std::cout << "Could not find a value for ANIMATIONSPEED_PLAYERWALK in developement_config.m1cfg" << std::endl;
+	}
 }

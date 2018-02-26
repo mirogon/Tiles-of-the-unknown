@@ -24,6 +24,7 @@
 #include <sstream>
 #include <fstream>
 #include <functional>
+#include <math.h>
 #include <M1Random.h>
 #include <M1Timer.h>
 
@@ -98,6 +99,65 @@ namespace m1
 		{
 			return false;
 		}
+
+	}
+
+	template <typename T>
+	bool ReadConfig(const char* filename, const char* varName, T& out)
+	{
+		std::ifstream configIn(filename, std::ios::in);
+		std::string inString = std::string();
+		std::stringstream converter = std::stringstream();
+		char cacheChar;
+		bool foundVar = false;
+
+		while (configIn.get(cacheChar))
+		{
+
+			if (cacheChar == ':')
+			{
+				if (inString == varName)
+				{
+					foundVar = true;
+					inString.clear();
+					inString.shrink_to_fit();
+					continue;
+
+				}
+
+				else
+				{
+					inString.clear();
+					inString.shrink_to_fit();
+					continue;
+				}
+
+			}
+
+			else if (cacheChar == ';')
+			{
+				if (foundVar == true)
+				{
+					converter << inString;
+					converter >> out;
+					configIn.close();
+					return true;
+				}
+				inString.clear();
+				inString.shrink_to_fit();
+				continue;
+			}
+
+			else if (cacheChar == ' ' || cacheChar == '\n')
+			{
+				continue;
+			}
+
+			inString.push_back(cacheChar);
+		}
+
+		configIn.close();
+		return false;
 
 	}
 

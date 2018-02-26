@@ -10,8 +10,8 @@ C_Animation::C_Animation(m1::E_AnimationType type)
 	switch (animationType)
 	{
 	case m1::E_AnimationType::PlayerWalkDown:
-		frameWidth = 16 * PLAYER_SCALE * RESOLUTION_SCALE_W;
-		frameHeight = 16 * PLAYER_SCALE * RESOLUTION_SCALE_H;
+		frameWidth = round( 16 * PLAYER_SCALE * RESOLUTION_SCALE_W );
+		frameHeight = round(16 * PLAYER_SCALE * RESOLUTION_SCALE_H );
 		animationLength = ANIMATIONLENGTH_PLAYERWALKDOWN;
 		renderFunction = &C_Animation::RenderPlayer;
 		break;
