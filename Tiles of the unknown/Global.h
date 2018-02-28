@@ -1,7 +1,7 @@
 #pragma once
 
 
-#define WIN7BUILD
+//#define WIN7BUILD
 
 #ifdef WIN7BUILD
 
@@ -61,7 +61,7 @@ namespace m1
 
 	enum E_GameState { GS_None = 0, GS_Game_Play = 1, GS_Game_Over = 2, GS_Game_Menu = 3, };
 
-	enum E_SpriteType { Floor = 0};
+	enum E_SpriteType { Floor1 = 0, Floor2 = 1, Floor3 = 2, Floor4 = 3, Floor5 = 4};
 	enum E_AnimationType { PlayerWalkDown = 0, PlayerWalkUp = 1, PlayerWalkLeft = 2, PlayerWalkRight = 3 };
 
 	class C_DeltaTimer_Microseconds

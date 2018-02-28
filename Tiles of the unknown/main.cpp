@@ -12,6 +12,8 @@ int main(int argc, char* argv[])
 
 	try 
 	{
+		
+		//std::cout << "SIZEOF C_SPRITE: " << sizeof(C_Sprite) << std::endl;
 
 		ReadConfig();
 

@@ -41,7 +41,7 @@ inline void C_Sprite::Render(int xOffset, int yOffset)
 	static SDL_Rect dstRect;
 
 	dstRect = { int(rect.x + xOffset), int(rect.y + yOffset), int(rect.w), int(rect.h) };
-
+	
 	SDL_RenderCopy(_GetRenderer, currentTexture, &renderSrcRect, &dstRect);
 }
 

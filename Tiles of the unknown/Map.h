@@ -7,7 +7,7 @@ public:
 	C_Map();
 	~C_Map() = default;
 
-	void RenderMap(const float& cameraPosX, const float& cameraPosY);
+	void RenderMap(const float& cameraPosX = 0, const float& cameraPosY = 0);
 	void MoveMap(const float& xChange, const float& yChange) = delete;
 
 private:
@@ -43,12 +43,6 @@ inline void C_Map::RenderMap(const float& cameraPosX, const float& cameraPosY)
 		}
 	}
 
-	/*
-	for (int i = 0; i < mapTiles.size(); ++i)
-	{
-		mapTiles.at(i).Render();
-	}
-	*/
 }
 
 /*

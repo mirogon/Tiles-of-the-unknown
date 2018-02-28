@@ -2,7 +2,6 @@
 
 C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 {
-
 	rect.x = x;
 	rect.y = y;
 
@@ -12,13 +11,53 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 
 	switch (spriteType)
 	{
-	case m1::E_SpriteType::Floor:
-		rect.w = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_W );
-		rect.h = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_H );
+	case m1::E_SpriteType::Floor1:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
 		renderSrcRect.x = 0;
 		renderSrcRect.y = 0;
-		renderSrcRect.w = 16;
-		renderSrcRect.h = 16;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor2:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 8;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor3:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 16;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor4:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 24;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor5:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 32;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
 		currentTexture = mapSheet;
 		break;
 
@@ -31,7 +70,8 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 
 C_Sprite::~C_Sprite()
 {
-
+	//SDL_DestroyTexture(currentTexture);
+	//currentTexture = nullptr;
 }
 
 void C_Sprite::Init(m1::E_SpriteType s, int x, int y)
@@ -46,13 +86,57 @@ void C_Sprite::Init(m1::E_SpriteType s, int x, int y)
 
 	switch (spriteType)
 	{
-	case m1::E_SpriteType::Floor:
-		rect.w = round(float(16) * FLOOR_SCALE * RESOLUTION_SCALE_W);
-		rect.h = round(float(16) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+	case m1::E_SpriteType::Floor1:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
 		renderSrcRect.x = 0;
 		renderSrcRect.y = 0;
-		renderSrcRect.w = 16;
-		renderSrcRect.h = 16;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		if (currentTexture == nullptr)
+		{
+			throw "Floor1 could not be intialized";
+		}
+		break;
+
+	case m1::E_SpriteType::Floor2:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 8;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor3:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 16;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor4:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 24;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
+		currentTexture = mapSheet;
+		break;
+
+	case m1::E_SpriteType::Floor5:
+		rect.w = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(8) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 32;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 8;
+		renderSrcRect.h = 8;
 		currentTexture = mapSheet;
 		break;
 

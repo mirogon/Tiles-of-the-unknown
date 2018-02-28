@@ -16,6 +16,7 @@ private:
 	m1::C_Timer gameTimer;
 
 	C_Player player;
+
 	C_Map map;
 
 	void MoveCamera(const uint64_t& deltaTime);
