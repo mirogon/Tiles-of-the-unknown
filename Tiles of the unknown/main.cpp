@@ -11,7 +11,6 @@ int main(int argc, char* argv[])
 	TTF_Init();
 
 	try 
-	
 	{
 
 		ReadConfig();
@@ -85,7 +84,7 @@ int main(int argc, char* argv[])
 	}
 
 
-	C_Sprite::DeallocateStaticTextures();
+	C_Animation::DeallocateStaticAnimations();
 	C_Sprite::DeallocateStaticTextures();
 	TTF_Quit();
 	IMG_Quit();

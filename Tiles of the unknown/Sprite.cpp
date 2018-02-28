@@ -13,7 +13,7 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 	case m1::E_SpriteType::Floor:
 		rect.w = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_W );
 		rect.h = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_H );
-		std::cout << "Create floor tile with size: " << rect.w <<"x"<<rect.h<< std::endl;
+		//std::cout << "Create floor tile with size: " << rect.w <<"x"<<rect.h<< std::endl;
 		renderFunction = &C_Sprite::RenderFloor;
 		break;
 

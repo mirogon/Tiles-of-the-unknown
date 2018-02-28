@@ -46,6 +46,9 @@ extern const uint8_t ANIMATIONLENGTH_PLAYERWALKDOWN;
 //PATHS
 extern const char* MAPSHEETPATH;
 extern const char* PLAYERWALKDOWNSHEETPATH;
+extern const char* PLAYERWALKUPSHEETPATH;
+extern const char* PLAYERWALKLEFTSHEETPATH;
+extern const char* PLAYERWALKRIGHTSHEETPATH;
 
 //SCALES
 extern float FLOOR_SCALE;
@@ -59,7 +62,7 @@ namespace m1
 	enum E_GameState { GS_None = 0, GS_Game_Play = 1, GS_Game_Over = 2, GS_Game_Menu = 3, };
 
 	enum E_SpriteType { Floor = 0};
-	enum E_AnimationType { PlayerWalkDown = 0 };
+	enum E_AnimationType { PlayerWalkDown = 0, PlayerWalkUp = 1, PlayerWalkLeft = 2, PlayerWalkRight = 3 };
 
 	struct double_Rect {
 
@@ -101,6 +104,9 @@ namespace m1
 		}
 
 	}
+
+
+
 
 	template <typename T>
 	bool ReadConfig(const char* filename, const char* varName, T& out)

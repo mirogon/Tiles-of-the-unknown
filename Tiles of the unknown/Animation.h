@@ -29,12 +29,20 @@ private:
 	int frameWidth;
 	int frameHeight;
 	void(C_Animation::*renderFunction)(int x, int y);
-	static SDL_Texture* playerAnimation;
+	
 	uint8_t animationLength;
 	uint8_t currentFrame;
 
+	static SDL_Texture* playerWalkDownAnimation;
+	static SDL_Texture* playerWalkUpAnimation;
+	static SDL_Texture* playerWalkRightAnimation;
+	static SDL_Texture* playerWalkLeftAnimation;
+
 	//FUNCTIONS
-	void RenderPlayer(int x, int y);
+	void RenderPlayerWalkDown(int x, int y);
+	void RenderPlayerWalkUp(int x, int y);
+	void RenderPlayerWalkLeft(int x, int y);
+	void RenderPlayerWalkRight(int x, int y);
 
 };
 
@@ -62,7 +70,7 @@ inline void C_Animation::SetFrame(uint8_t frame)
 	}
 }
 
-inline void C_Animation::RenderPlayer(int x, int y)
+inline void C_Animation::RenderPlayerWalkDown(int x, int y)
 {
 	static SDL_Rect srcRect;
 	static SDL_Rect dstRect;
@@ -70,5 +78,38 @@ inline void C_Animation::RenderPlayer(int x, int y)
 	srcRect = { currentFrame * 16 ,0, 16, 16 };
 	dstRect = { x, y, frameWidth, frameHeight };
 
-	SDL_RenderCopy(_GetRenderer, playerAnimation, &srcRect, &dstRect);
+	SDL_RenderCopy(_GetRenderer, playerWalkDownAnimation, &srcRect, &dstRect);
+}
+
+inline void C_Animation::RenderPlayerWalkUp(int x, int y)
+{
+	static SDL_Rect srcRect;
+	static SDL_Rect dstRect;
+
+	srcRect = { currentFrame * 16 ,0, 16, 16 };
+	dstRect = { x, y, frameWidth, frameHeight };
+
+	SDL_RenderCopy(_GetRenderer, playerWalkUpAnimation, &srcRect, &dstRect);
+}
+
+inline void C_Animation::RenderPlayerWalkLeft(int x, int y)
+{
+	static SDL_Rect srcRect;
+	static SDL_Rect dstRect;
+
+	srcRect = { currentFrame * 16 ,0, 16, 16 };
+	dstRect = { x, y, frameWidth, frameHeight };
+
+	SDL_RenderCopy(_GetRenderer, playerWalkLeftAnimation, &srcRect, &dstRect);
+}
+
+inline void C_Animation::RenderPlayerWalkRight(int x, int y)
+{
+	static SDL_Rect srcRect;
+	static SDL_Rect dstRect;
+
+	srcRect = { currentFrame * 16 ,0, 16, 16 };
+	dstRect = { x, y, frameWidth, frameHeight };
+
+	SDL_RenderCopy(_GetRenderer, playerWalkRightAnimation, &srcRect, &dstRect);
 }

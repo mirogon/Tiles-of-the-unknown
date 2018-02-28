@@ -1,66 +1,90 @@
 ﻿  Animation.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-Animation.cpp(13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
 Animation.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Animation.cpp(33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Base.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   Game.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(34): warning C4018: '>=': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(44): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(21): warning C4018: '<': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(30): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(53): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(89): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(104): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(119): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(131): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(28): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(29): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(38): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(56): warning C4018: '<': signed/unsigned mismatch
   Global.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
   main.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(34): warning C4018: '>=': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(44): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(21): warning C4018: '<': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(30): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(53): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(89): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(104): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(119): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(131): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(28): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(29): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(38): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(56): warning C4018: '<': signed/unsigned mismatch
   Map.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(34): warning C4018: '>=': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(44): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(21): warning C4018: '<': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(30): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(53): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(89): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(104): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(119): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(131): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(28): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(29): warning C4244: '=': conversion from 'const double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(38): warning C4018: '<': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Map.h(56): warning C4018: '<': signed/unsigned mismatch
   Player.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(34): warning C4018: '>=': signed/unsigned mismatch
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(44): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(53): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(89): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(104): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(119): warning C4018: '>=': signed/unsigned mismatch
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Player.h(131): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
 Player.cpp(6): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 Player.cpp(7): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Sprite.cpp
 E:\Programming\C++\Libraries\M1\M1Random\include\M1Random.h(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 E:\Programming\C++\Libraries\M1\M1Timer\include\M1Timer.h(43): warning C4244: 'return': conversion from '__int64' to 'uint32_t', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(79): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(83): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(82): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+e:\programming\c++\projects\tiles of the unknown\tiles of the unknown\Global.h(86): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
 Sprite.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 Sprite.cpp(15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 Sprite.cpp(42): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 Sprite.cpp(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Generating code
-  All 281 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 286 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Tiles of the unknown.vcxproj -> E:\Programming\C++\Projects\Tiles of the unknown\Release\Tiles of the unknown.exe
