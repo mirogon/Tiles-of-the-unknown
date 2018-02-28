@@ -8,13 +8,18 @@ C_Sprite::C_Sprite(m1::E_SpriteType s, int x, int y )
 
 	spriteType = s;
 
+	currentTexture = nullptr;
+
 	switch (spriteType)
 	{
 	case m1::E_SpriteType::Floor:
 		rect.w = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_W );
 		rect.h = round( float(16) * FLOOR_SCALE * RESOLUTION_SCALE_H );
-		//std::cout << "Create floor tile with size: " << rect.w <<"x"<<rect.h<< std::endl;
-		renderFunction = &C_Sprite::RenderFloor;
+		renderSrcRect.x = 0;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 16;
+		renderSrcRect.h = 16;
+		currentTexture = mapSheet;
 		break;
 
 	default:
@@ -31,17 +36,24 @@ C_Sprite::~C_Sprite()
 
 void C_Sprite::Init(m1::E_SpriteType s, int x, int y)
 {
+
 	rect.x = x;
 	rect.y = y;
 
 	spriteType = s;
 
+	currentTexture = nullptr;
+
 	switch (spriteType)
 	{
 	case m1::E_SpriteType::Floor:
-		rect.w = 16 * FLOOR_SCALE * RESOLUTION_SCALE_W;
-		rect.h = 16 * FLOOR_SCALE * RESOLUTION_SCALE_H;
-		renderFunction = &C_Sprite::RenderFloor;
+		rect.w = round(float(16) * FLOOR_SCALE * RESOLUTION_SCALE_W);
+		rect.h = round(float(16) * FLOOR_SCALE * RESOLUTION_SCALE_H);
+		renderSrcRect.x = 0;
+		renderSrcRect.y = 0;
+		renderSrcRect.w = 16;
+		renderSrcRect.h = 16;
+		currentTexture = mapSheet;
 		break;
 
 	default:

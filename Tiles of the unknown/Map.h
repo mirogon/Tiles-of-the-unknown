@@ -7,8 +7,8 @@ public:
 	C_Map();
 	~C_Map() = default;
 
-	void RenderMap();
-	void MoveMap(const float& xChange, const float& yChange);
+	void RenderMap(const float& cameraPosX, const float& cameraPosY);
+	void MoveMap(const float& xChange, const float& yChange) = delete;
 
 private:
 	std::vector<C_Sprite> mapTiles;
@@ -16,7 +16,7 @@ private:
 	uint16_t mapSizeY;
 };
 
-inline void C_Map::RenderMap()
+inline void C_Map::RenderMap(const float& cameraPosX, const float& cameraPosY)
 {
 	//std::cout << "First tile coor X: " << int(mapTiles[0].GetRect().x )<< " Y: " << int( mapTiles[0].GetRect().y) << std::endl;
 	static int mapOffsetX;
@@ -25,8 +25,8 @@ inline void C_Map::RenderMap()
 	static int mapOffsetYTiles;
 	static int upperLeftRenderTileIndex;
 
-	mapOffsetX = -mapTiles.at(0).GetRect().x;
-	mapOffsetY = -mapTiles.at(0).GetRect().y;
+	mapOffsetX = -cameraPosX;
+	mapOffsetY = -cameraPosY;
 	mapOffsetXTiles = mapOffsetX / mapTiles.at(0).GetRect().w;
 	mapOffsetYTiles = mapOffsetY / mapTiles.at(0).GetRect().h;
 	upperLeftRenderTileIndex = mapSizeX * mapOffsetYTiles + mapOffsetXTiles;
@@ -37,7 +37,7 @@ inline void C_Map::RenderMap()
 		{
 			if (o < mapTiles.size())
 			{
-				mapTiles.at(o).Render();
+				mapTiles.at(o).Render(cameraPosX, cameraPosY);
 			}
 			
 		}
@@ -51,6 +51,7 @@ inline void C_Map::RenderMap()
 	*/
 }
 
+/*
 inline void C_Map::MoveMap(const float& xChange, const float& yChange)
 {
 	for (int i = 0; i < mapTiles.size(); ++i)
@@ -58,3 +59,4 @@ inline void C_Map::MoveMap(const float& xChange, const float& yChange)
 		mapTiles.at(i).Move(xChange, yChange);
 	}
 }
+*/

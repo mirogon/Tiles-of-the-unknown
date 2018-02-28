@@ -1,5 +1,5 @@
 #pragma once
-#include "Map.h"
+#include "Camera.h"
 
 class C_Game
 {
@@ -12,50 +12,50 @@ public:
 
 private:
 
+	C_Camera gameCamera;
 	m1::C_Timer gameTimer;
 
 	C_Player player;
 	C_Map map;
 
-	void MoveMap(const uint64_t& deltaTime);
+	void MoveCamera(const uint64_t& deltaTime);
 
 };
 
 inline m1::E_GameState C_Game::Game_Play()
 {
-	static uint64_t lastTime = gameTimer.GetTimeSinceStart_microseconds();
+	static m1::C_DeltaTimer_Microseconds moveMapTimer;
 
-	MoveMap(gameTimer.GetTimeSinceStart_microseconds() - lastTime);
-	map.RenderMap();
+	MoveCamera(moveMapTimer.GetDeltaTime());
+
+	map.RenderMap(gameCamera.GetRect().x, gameCamera.GetRect().y);
 
 	player.Handle();
 	player.Render();
 
-	lastTime = gameTimer.GetTimeSinceStart_microseconds();
-
 	return m1::E_GameState::GS_Game_Play;
 }
-inline void C_Game::MoveMap(const uint64_t& deltaTime)
+inline void C_Game::MoveCamera(const uint64_t& deltaTime)
 {
 	
 	if (m1::KeyIsPressed(SDL_SCANCODE_W))
 	{
-		map.MoveMap(0, MOVESPEED_H * deltaTime  );
+		gameCamera.Move(0, MOVESPEED_H * deltaTime);
 	}
 
 	if (m1::KeyIsPressed(SDL_SCANCODE_S))
 	{
-		map.MoveMap(0, -MOVESPEED_H * deltaTime );
+		gameCamera.Move(0, -MOVESPEED_H * deltaTime);
 	}
 
 	if (m1::KeyIsPressed(SDL_SCANCODE_A))
 	{
-		map.MoveMap(MOVESPEED_W * deltaTime, 0);
+		gameCamera.Move(MOVESPEED_W * deltaTime, 0);
 	}
 
 	if (m1::KeyIsPressed(SDL_SCANCODE_D))
 	{
-		map.MoveMap(-MOVESPEED_W * deltaTime, 0);
+		gameCamera.Move(-MOVESPEED_W * deltaTime, 0);
 	}
 
 }

@@ -64,6 +64,31 @@ namespace m1
 	enum E_SpriteType { Floor = 0};
 	enum E_AnimationType { PlayerWalkDown = 0, PlayerWalkUp = 1, PlayerWalkLeft = 2, PlayerWalkRight = 3 };
 
+	class C_DeltaTimer_Microseconds
+	{
+	public:
+
+		C_DeltaTimer_Microseconds()
+		{
+			lastTime = 0;
+			timer.RestartTimer();
+		}
+
+		uint64_t GetDeltaTime()
+		{
+			static uint64_t deltaTime;
+
+			deltaTime = timer.GetTimeSinceStart_microseconds() - lastTime;
+			lastTime = timer.GetTimeSinceStart_microseconds();
+			
+			return deltaTime;
+		}
+
+	private:
+		m1::C_Timer timer;
+		uint64_t lastTime;
+	};
+
 	struct double_Rect {
 
 		double x;

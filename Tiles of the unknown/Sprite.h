@@ -12,8 +12,8 @@ public:
 
 	virtual void Init(m1::E_SpriteType spriteType, int x = 0, int y = 0);
 
-	virtual void Render( );
-	virtual void Move(const float& xChange, const float& yChange);
+	virtual void Render( int xOffset = 0, int yOffset = 0);
+	virtual void Move(const float& xChange, const float& yChange) = delete;
 
 	const m1::double_Rect GetRect()
 	{
@@ -25,34 +25,30 @@ public:
 	
 protected:
 	static SDL_Texture* mapSheet;
-	void(C_Sprite::*renderFunction)();
+
 	m1::E_SpriteType spriteType;
 	m1::double_Rect rect;
 
+	SDL_Texture* currentTexture;
+	SDL_Rect renderSrcRect;
+
 	//Functions
-	void RenderFloor();
 
 };
 
-inline void C_Sprite::Render()
+inline void C_Sprite::Render(int xOffset, int yOffset)
 {
-	(this->*renderFunction)();
+	static SDL_Rect dstRect;
+
+	dstRect = { int(rect.x + xOffset), int(rect.y + yOffset), int(rect.w), int(rect.h) };
+
+	SDL_RenderCopy(_GetRenderer, currentTexture, &renderSrcRect, &dstRect);
 }
 
+/*
 inline void C_Sprite::Move(const float& xChange, const float& yChange)
 {
 	rect.x += xChange;
 	rect.y += yChange;
 }
-
-inline void C_Sprite::RenderFloor()
-{
-	static SDL_Rect srcRect;
-	static SDL_Rect dstRect;
-
-	srcRect = { 0,0, 16, 16 };
-	dstRect = { int(rect.x), int(rect.y), int(rect.w), int(rect.h)};
-	
-	SDL_RenderCopy(_GetRenderer, mapSheet, &srcRect, &dstRect);
-}
-
+*/
