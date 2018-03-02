@@ -6,8 +6,8 @@ C_Map::C_Map()
 
 	C_Sprite t(m1::E_SpriteType::Floor1);
 	
-	mapSizeX = SCREEN_RESOLUTION_W / t.GetRect().w + 1;
-	mapSizeY = SCREEN_RESOLUTION_H / t.GetRect().h + 1;
+	mapSizeX = 5000;//SCREEN_RESOLUTION_W / t.GetRect().w + 1;
+	mapSizeY = 1000; //SCREEN_RESOLUTION_H / t.GetRect().h + 1;
 
 	std::cout << "Max mapsize: " << mapTiles.max_size() << std::endl;
 

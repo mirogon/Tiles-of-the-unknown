@@ -1,3 +1,3 @@
 PLAYER_SCALE:4.0;
-FLOOR_SCALE:2.0;
+FLOOR_SCALE:4.0;
 ANIMATIONSPEED_PLAYERWALK:160; //This is the time one animation frame is displayed in milliseconds
